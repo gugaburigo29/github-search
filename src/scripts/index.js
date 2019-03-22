@@ -1,19 +1,15 @@
 import '../styles/style.scss';
 import getUserInfos from './services';
 
-const name = global.document.getElementsByClassName('name')[0];
-const avatar = global.document.getElementsByClassName('avatar')[0];
-const repos = global.document.getElementsByClassName('repos')[0];
+const name = document.querySelector('.name');
+const avatar = document.querySelector('.avatar');
+const repos = document.querySelector('.repos');
 
-const searchBtn = global.document.getElementsByClassName('search__btn')[0];
-const errorNotFound = global.document.getElementsByClassName(
-  'error__notfound'
-)[0];
+const searchBtn = document.querySelector('.search__btn');
+const errorNotFound = document.querySelector('.error__notfound');
 
 function searchUser() {
-  const searchInpuValue = global.document.getElementsByClassName(
-    'search-input'
-  )[0].value;
+  const searchInpuValue = document.querySelector('.search-input').value;
 
   if (searchInpuValue === '') {
     alert('Please, enter the user name');
